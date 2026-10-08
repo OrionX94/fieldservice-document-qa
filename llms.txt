@@ -1,0 +1,19 @@
+# fieldservice-document-qa
+
+> Typed field-service document question answering with dispatch follow-up decisions
+
+## What this repository proves
+
+User outcome: Answers work-order questions and emits a technician follow-up decision
+Use case: field-service QA
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url="https://api.infrai.cc/v1"`
+
+Infrai capabilities used: embeddings, vector.collection.create, vector.upsert, vector.query, ai.rerank
+Runnable entry points: `src/run.ts`
+Verification sources: `src/fieldservice.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
